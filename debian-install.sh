@@ -43,7 +43,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 cd $REPO_PATH
 
 curl -sS https://starship.rs/install.sh | sudo sh
-cp wallpaper.png ~/Pictures
 sudo unzip font-mononoki.zip -d /usr/share/fonts
 
 cd ~
