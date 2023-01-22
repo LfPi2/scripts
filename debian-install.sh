@@ -27,6 +27,7 @@ cd ~/repos
 git clone https://github.com/LfPi2/dwm
 git clone https://github.com/LfPi2/dmenu
 git clone https://github.com/EliverLara/Nordic
+git clone --separate-git-dir ~/.dotfiles https://github.com/LfPi2/dotfiles temp-dotfiles
 
 cd dwm
 make
@@ -36,6 +37,7 @@ make
 sudo make clean install
 cd ..
 sudo cp -r Nordic /usr/share/themes
+rsync -rv --exclude='.git' temp-dotfiles/ ~/
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
@@ -44,7 +46,3 @@ cd $REPO_PATH
 
 curl -sS https://starship.rs/install.sh | sudo sh
 sudo unzip font-mononoki.zip -d /usr/share/fonts
-
-cd ~
-
-git clone --separate-git-dir .dotfiles https://github.com/LfPi2/dotfiles ./
