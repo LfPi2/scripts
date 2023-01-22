@@ -13,7 +13,7 @@ sudo apt-get -y update
 sudo apt-get -y install git gcc make man-db unzip curl wget
 sudo apt-get -y install xorg pulseaudio
 sudo apt-get -y install libx11-dev libxft-dev libxinerama-dev dbus-x11
-sudo apt-get -y install xdg-user-dirs feh acpi picom htop ssh bat
+sudo apt-get -y install xdg-user-dirs feh acpi picom htop ssh bat rsync
 sudo apt-get -y install neovim kitty nodejs npm flatpak
 sudo apt-get -y install firefox-esr thunar pavucontrol mpv
 sudo apt-get -y install neofetch cowsay cmatrix cbonsai lolcat cava
