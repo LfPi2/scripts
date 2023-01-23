@@ -2,9 +2,9 @@
 
 options="shutdown\nreboot"
 
-option="$option $(echo $options | dmenu)"
+option="$(echo $options | dmenu)"
 
 case $option in
-	shutdown) shutdown -h now;;
-	reboot) reboot;;
+	shutdown) systemctl poweroff;;
+	reboot) systemctl reboot;;
 esac

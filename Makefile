@@ -2,6 +2,6 @@ PATH = /bin
 scripts = dmenu-shutdown
 
 clean:
-	sudo rm -f $(PATH)/$(scripts)
+	rm -f $(PATH)/$(scripts)
 install:
-	sudo cp $(scripts) $(PATH)/$(scripts)
+	cp $(scripts) $(PATH)/$(scripts)
