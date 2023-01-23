@@ -42,7 +42,9 @@ rsync -rv --exclude='.git' temp-dotfiles/ ~/
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
-cd $REPO_PATH
+cd ../$REPO_PATH
+
+make install
 
 curl -sS https://starship.rs/install.sh | sudo sh
 sudo unzip font-mononoki.zip -d /usr/share/fonts

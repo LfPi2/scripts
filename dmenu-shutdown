@@ -1,0 +1,10 @@
+#!/bin/sh
+
+options="shutdown\nreboot"
+
+option="$option $(echo $options | dmenu)"
+
+case $option in
+	shutdown) shutdown -h now;;
+	reboot) reboot;;
+esac
