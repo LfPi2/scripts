@@ -1,0 +1,17 @@
+#!/bin/sh
+
+BACKLIGHT_PATH="/sys/class/backlight"
+
+backlight_devices="$(ls -1 $BACKLIGHT_PATH)"
+backlight_device="$(echo $backlight_devices | dmenu)"
+
+if [ $backlight_device ]; then
+	max_brightness=$(cat $BACKLIGHT_PATH/$backlight_device/max_brightness)
+
+	brightness_options="100\n90\n80\n70\n60\n50\n40\n30\n20\n10"
+	brightness_option="$(echo $brightness_options | dmenu)"
+
+	if [ $brightness_option ]; then
+		echo $((max_brightness * brightness_option / 100)) > $BACKLIGHT_PATH/$backlight_device/brightness
+	fi
+fi

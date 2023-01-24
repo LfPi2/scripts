@@ -8,3 +8,5 @@ case $option in
 	shutdown) systemctl poweroff;;
 	reboot) systemctl reboot;;
 esac
+
+echo '12000' > /sys/class/backlight/intel_backlight/brightness

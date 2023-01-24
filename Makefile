@@ -1,7 +1,7 @@
 PATH = /bin
-scripts = dmenu-shutdown
+scripts = dmenu-shutdown dmenu-brightness
 
 clean:
-	rm -f $(PATH)/$(scripts)
+	rm -f $(foreach script,$(scripts),$(PATH)/$(script))
 install:
-	cp $(scripts) $(PATH)/$(scripts)
+	cp -t $(PATH) $(scripts)
